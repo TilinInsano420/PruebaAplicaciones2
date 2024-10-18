@@ -1,0 +1,26 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/nav_agregar_aparato"
+        android:title="Agregar Aparato" />
+    <item
+        android:id="@+id/nav_agregar_boleta"
+        android:title="Agregar Boleta" />
+    <item
+        android:id="@+id/nav_ver_cantidad_usos"
+        android:title="Ver Cantidad de Usos" />
+    <item
+        android:id="@+id/nav_editar_eliminar"
+        android:title="Editar/Eliminar" />
+    <item
+        android:id="@+id/nav_historial"
+        android:title="Historial" />
+    <item
+        android:id="@+id/nav_ver_gastos_mes"
+        android:title="Ver Gastos del Mes" />
+    <item
+        android:id="@+id/nav_ver_perfil"
+        android:title="Ver Perfil" />
+    <item
+        android:id="@+id/nav_cerrar_sesion"
+        android:title="Cerrar Sesión" />
+</menu>

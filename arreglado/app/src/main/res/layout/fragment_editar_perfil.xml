@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Editar_perfil">
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="3dp"
+        android:layout_marginTop="56dp"
+        android:text="@string/EditarP"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display2"
+        android:textColor="@color/blancotexto"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.488"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layoutEditarPerfil"
+        android:layout_width="378dp"
+        android:layout_height="592dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/borde_constraint"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.484"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.884">
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="350dp"
+            android:layout_height="25dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginBottom="8dp"
+            android:background="@color/verdecuadro"
+            android:text="@string/NomH"
+            android:textColor="@color/blancotexto"
+            app:layout_constraintBottom_toTopOf="@+id/Eusuario"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/Eusuario"
+            android:layout_width="350dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="28dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="28dp"
+            android:background="@drawable/edittext_borde"
+            android:hint="@string/NomH"
+            android:inputType="text"
+            android:textColor="@color/blancotexto"
+            android:textColorHint="@color/blancotexto"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="350dp"
+            android:layout_height="25dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginBottom="8dp"
+            android:background="@color/verdecuadro"
+            android:text="@string/CorreoC"
+            android:textColor="@color/blancotexto"
+            app:layout_constraintBottom_toTopOf="@+id/Eemail"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/Eusuario" />
+
+        <EditText
+            android:id="@+id/Eemail"
+            android:layout_width="350dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/edittext_borde"
+            android:hint="@string/CorreoH"
+            android:inputType="textEmailAddress"
+            android:textColor="@color/blancotexto"
+            android:textColorHint="@color/blancotexto"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView5" />
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="350dp"
+            android:layout_height="25dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginBottom="8dp"
+            android:background="@color/verdecuadro"
+            android:text="@string/contraactual"
+            android:textColor="@color/blancotexto"
+            app:layout_constraintBottom_toTopOf="@+id/EpasswordActual"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/Eemail" />
+
+        <EditText
+            android:id="@+id/EpasswordActual"
+            android:layout_width="350dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/edittext_borde"
+            android:hint="@string/contraactual"
+            android:inputType="textPassword"
+            android:textColor="@color/blancotexto"
+            android:textColorHint="@color/blancotexto"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView6" />
+
+        <TextView
+            android:id="@+id/textView7"
+            android:layout_width="350dp"
+            android:layout_height="25dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginBottom="8dp"
+            android:background="@color/verdecuadro"
+            android:text="@string/nuevacontra"
+            android:textColor="@color/blancotexto"
+            app:layout_constraintBottom_toTopOf="@+id/Epassword"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/EpasswordActual" />
+
+        <EditText
+            android:id="@+id/Epassword"
+            android:layout_width="350dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/edittext_borde"
+            android:hint="@string/nuevacontra"
+            android:inputType="textPassword"
+            android:textColor="@color/blancotexto"
+            android:textColorHint="@color/blancotexto"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView7" />
+
+
+        <TextView
+            android:id="@+id/textView8"
+            android:layout_width="350dp"
+            android:layout_height="25dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="8dp"
+            android:background="@color/verdecuadro"
+            android:text="@string/nuevacontraC"
+            android:textColor="@color/blancotexto"
+            app:layout_constraintBottom_toTopOf="@+id/EpasswordConfirm"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/Epassword" />
+
+        <EditText
+            android:id="@+id/EpasswordConfirm"
+            android:layout_width="350dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="12dp"
+            android:background="@drawable/edittext_borde"
+            android:hint="@string/nuevacontraC"
+            android:inputType="textPassword"
+            android:textColor="@color/blancotexto"
+            android:textColorHint="@color/blancotexto"
+            app:layout_constraintBottom_toTopOf="@+id/botEditar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <Button
+            android:id="@+id/botEditar"
+            android:layout_width="150dp"
+            android:layout_height="49dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="8dp"
+            android:text="@string/EditarP"
+            android:textColor="@color/blancotexto"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <Button
+            android:id="@+id/botCancelar"
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginBottom="7dp"
+            android:text="Cancelar"
+            android:textColor="@color/blancotexto"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

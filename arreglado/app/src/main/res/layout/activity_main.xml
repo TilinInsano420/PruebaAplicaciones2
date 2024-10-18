@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/verdedarkprima"
+    android:theme="@style/Base.Theme.Arreglado"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/Proyecto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="145dp"
+        android:layout_marginTop="58dp"
+        android:layout_marginEnd="145dp"
+        android:layout_marginBottom="36dp"
+        android:text="@string/Titulo"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="@color/blancotexto"
+        app:layout_constraintBottom_toTopOf="@+id/Titulo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="@string/Titulo" />
+
+    <TextView
+        android:id="@+id/Titulo"
+        android:layout_width="278dp"
+        android:layout_height="74dp"
+        android:gravity="center"
+        android:text="@string/ingresar"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        android:textColor="@color/blancotexto"
+        android:theme="@style/Base.Theme.Arreglado"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.188" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/Caja"
+        android:layout_width="377dp"
+        android:layout_height="524dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="34dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="39dp"
+        android:background="@drawable/borde_constraint"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Titulo">
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="300dp"
+            android:layout_height="75dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginEnd="41dp"
+            android:layout_marginBottom="26dp"
+            android:text="@string/ingresar"
+            android:textColor="@color/blancotexto"
+            app:layout_constraintBottom_toTopOf="@+id/Registrarse"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <EditText
+            android:id="@+id/nombreus"
+            android:layout_width="350dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="36dp"
+            android:background="@drawable/edittext_borde"
+            android:ems="10"
+            android:hint="@string/usu"
+            android:inputType="textEmailAddress"
+            android:textColor="@color/blancotexto"
+            android:textColorHint="@color/blancotexto"
+            app:layout_constraintBottom_toTopOf="@+id/Contraseña"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="350dp"
+            android:layout_height="25dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="29dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="15dp"
+            android:background="@color/verdecuadro"
+            android:text="@string/CorreoC"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="@color/blancotexto"
+            android:textColorHint="@color/blancotexto"
+            android:textColorLink="@color/blancotexto"
+            app:layout_constraintBottom_toTopOf="@+id/nombreus"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/Contraseña"
+            android:layout_width="350dp"
+            android:layout_height="25dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="15dp"
+            android:background="@color/verdecuadro"
+            android:text="Contraseña"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="@color/blancotexto"
+            app:layout_constraintBottom_toTopOf="@+id/Contra"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/Registrarse"
+            android:layout_width="220dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="80dp"
+            android:layout_marginEnd="81dp"
+            android:layout_marginBottom="22dp"
+            android:background="@color/verdecuadro"
+            android:clickable="true"
+            android:onClick="regis"
+            android:text="@string/Rus"
+            android:textColor="@color/blancotexto"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <EditText
+            android:id="@+id/Contra"
+            android:layout_width="350dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="72dp"
+            android:background="@drawable/edittext_borde"
+            android:ems="10"
+            android:hint="Ingrese su Contraseña"
+            android:inputType="textPassword"
+            android:textColor="@color/blancotexto"
+            android:textColorHint="@color/blancotexto"
+            android:textColorLink="@color/blancotexto"
+            app:layout_constraintBottom_toTopOf="@+id/button"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.727"
+            app:layout_constraintStart_toStartOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

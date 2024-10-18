@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="verdeprima">#8bc34a</color>
+    <color name="verdeaccent">#4caf50</color>
+    <color name="verdedarkprima">#689f38</color>
+    <color name="verdecuadro">#38502c</color>
+    <color name="blancotexto">#ffffff</color>
+    <color name="botonesgris">#585858</color>
+</resources>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/borde_constraint"
+    android:padding="8dp">
+
+    <TextView
+        android:id="@+id/nombreAparato"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/verdecuadro"
+        android:text="Nombre del aparato: "
+        android:textColor="@color/blancotexto"
+        android:textSize="16sp"
+        android:textStyle="normal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/cantidadUsada"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="@color/verdecuadro"
+        android:text="Cantidad usada: 5 horas"
+        android:textColor="@color/blancotexto"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/nombreAparato" />
+
+    <TextView
+        android:id="@+id/tipoUso"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="@color/verdecuadro"
+        android:text="Tipo de uso: Horas por día"
+        android:textColor="@color/blancotexto"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cantidadUsada" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

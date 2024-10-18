@@ -1,0 +1,119 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:theme="@style/Theme.Arreglado"
+    tools:context=".Ver_gastos_mes">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/Mostar_Aparatos"
+        android:layout_width="414dp"
+        android:layout_height="416dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Titutlo_gastos">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerViewAparatos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:listitem="@layout/item_aparato" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/Monto_ahorrado"
+        android:layout_width="372dp"
+        android:layout_height="65dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/borde_constraint"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TextView
+            android:id="@+id/txt_monto_ahorrado"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="132dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="132dp"
+            android:background="@color/verdecuadro"
+            android:text="Monto Ahorrado"
+            android:textColor="@color/blancotexto"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/Valor_boleta"
+        android:layout_width="182dp"
+        android:layout_height="92dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/borde_constraint"
+        app:layout_constraintBottom_toTopOf="@+id/Monto_ahorrado"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TextView
+            android:id="@+id/txt_valor_boleta"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="36dp"
+            android:layout_marginTop="24dp"
+            android:background="@color/verdecuadro"
+            android:text="Valor Boleta"
+            android:textColor="@color/blancotexto"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/Valor_aparatos"
+        android:layout_width="182dp"
+        android:layout_height="92dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/borde_constraint"
+        app:layout_constraintBottom_toTopOf="@+id/Monto_ahorrado"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <TextView
+            android:id="@+id/txt_valor_aparatos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="36dp"
+            android:layout_marginTop="24dp"
+            android:background="@color/verdecuadro"
+            android:text="Valor Aparatos"
+            android:textColor="@color/blancotexto"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/Titutlo_gastos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="157dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="157dp"
+        android:text="@string/vergastos"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        android:textColor="@color/blancotexto"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

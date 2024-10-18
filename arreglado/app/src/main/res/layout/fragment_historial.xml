@@ -1,0 +1,74 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Historial" >
+
+    <TextView
+        android:id="@+id/textView11"
+        android:layout_width="345dp"
+        android:layout_height="99dp"
+        android:layout_marginStart="33dp"
+        android:layout_marginTop="45dp"
+        android:layout_marginEnd="33dp"
+        android:text="@string/historial"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        android:textColor="@color/blancotexto"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Cuadro de resumen -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cuadroResumen"
+        android:layout_width="372dp"
+        android:layout_height="120dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/borde_constraint"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView11">
+
+        <TextView
+            android:id="@+id/txt_aparatos_agregados"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:background="@color/verdecuadro"
+            android:text="Aparatos agregados: 4"
+            android:textColor="@color/blancotexto"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/txt_valor_boleta_historial"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="205dp"
+            android:background="@color/verdecuadro"
+            android:text="Valor boleta: 5000 CLP"
+            android:textColor="@color/blancotexto"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txt_aparatos_agregados" />
+
+        <TextView
+            android:id="@+id/txt_valor_aparatos_historial"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:background="@color/verdecuadro"
+            android:text="Valor aparatos: 3000 CLP"
+            android:textColor="@color/blancotexto"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txt_valor_boleta_historial" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

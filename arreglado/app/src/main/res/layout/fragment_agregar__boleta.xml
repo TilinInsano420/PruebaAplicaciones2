@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Agregar_Boleta">
+
+    <Button
+        android:id="@+id/botAgregarBoleta"
+        android:layout_width="350dp"
+        android:layout_height="75dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="31dp"
+        android:layout_marginBottom="34dp"
+        android:text="@string/boleta"
+        android:textColor="@color/blancotexto"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/Titulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="96dp"
+        android:layout_marginEnd="94dp"
+        android:layout_marginBottom="21dp"
+        android:text="@string/boleta"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        android:textColor="@color/blancotexto"
+        app:layout_constraintBottom_toTopOf="@+id/constraintLayout2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout2"
+        android:layout_width="384dp"
+        android:layout_height="512dp"
+        android:layout_marginStart="13dp"
+        android:layout_marginEnd="13dp"
+        android:layout_marginBottom="28dp"
+        android:background="@drawable/borde_constraint"
+        app:layout_constraintBottom_toTopOf="@+id/botAgregarBoleta"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TextView
+            android:id="@+id/AdminServicio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="116dp"
+            android:layout_marginBottom="8dp"
+            android:background="@color/verdecuadro"
+            android:text="Administración del servicio (CLP)"
+            android:textColor="@color/blancotexto"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toTopOf="@+id/AdminServicioinput"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <EditText
+            android:id="@+id/AdminServicioinput"
+            android:layout_width="350dp"
+            android:layout_height="50dp"
+            android:layout_marginEnd="2dp"
+            android:layout_marginBottom="18dp"
+            android:background="@drawable/edittext_borde"
+            android:hint="Ej: 5000 CLP"
+            android:inputType="numberDecimal"
+            android:textColor="@color/blancotexto"
+            android:textColorHint="@color/blancotexto"
+            app:layout_constraintBottom_toTopOf="@+id/Transporte"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintWidth_percent="0.9" />
+
+        <TextView
+            android:id="@+id/Transporte"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="121dp"
+            android:layout_marginBottom="7dp"
+            android:background="@color/verdecuadro"
+            android:text="Transporte de electricidad (CLP)"
+            android:textColor="@color/blancotexto"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toTopOf="@+id/Transporteinput"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <EditText
+            android:id="@+id/Transporteinput"
+            android:layout_width="350dp"
+            android:layout_height="50dp"
+            android:layout_marginBottom="18dp"
+            android:background="@drawable/edittext_borde"
+            android:hint="Ej: 3000 CLP"
+            android:inputType="numberDecimal"
+            android:textColor="@color/blancotexto"
+            android:textColorHint="@color/blancotexto"
+            app:layout_constraintBottom_toTopOf="@+id/Consumo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintWidth_percent="0.9" />
+
+        <TextView
+            android:id="@+id/Consumo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="139dp"
+            android:layout_marginBottom="8dp"
+            android:background="@color/verdecuadro"
+            android:text="Electricidad consumida (kWh)"
+            android:textColor="@color/blancotexto"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toTopOf="@+id/Consumoinput"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <EditText
+            android:id="@+id/Consumoinput"
+            android:layout_width="350dp"
+            android:layout_height="50dp"
+            android:layout_marginBottom="18dp"
+            android:background="@drawable/edittext_borde"
+            android:hint="Ej: 150 kWh"
+            android:inputType="numberDecimal"
+            android:textColor="@color/blancotexto"
+            android:textColorHint="@color/blancotexto"
+            app:layout_constraintBottom_toTopOf="@+id/ValorKwh"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintWidth_percent="0.9" />
+
+        <TextView
+            android:id="@+id/ValorKwh"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="202dp"
+            android:layout_marginBottom="8dp"
+            android:background="@color/verdecuadro"
+            android:text="Costo por kWh (CLP)"
+            android:textColor="@color/blancotexto"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toTopOf="@+id/ValorKwhinput"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <EditText
+            android:id="@+id/ValorKwhinput"
+            android:layout_width="350dp"
+            android:layout_height="50dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/edittext_borde"
+            android:hint="Ej: 100 CLP"
+            android:inputType="numberDecimal"
+            android:textColor="@color/blancotexto"
+            android:textColorHint="@color/blancotexto"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintWidth_percent="0.9" />
+
+        <TextView
+            android:id="@+id/tvFechaSeleccionada"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:background="@color/verdecuadro"
+            android:text="Fecha: No seleccionada"
+            android:textColor="@color/blancotexto"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toTopOf="@+id/botSelectDate"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <Button
+            android:id="@+id/botSelectDate"
+            android:layout_width="350dp"
+            android:layout_height="50dp"
+            android:layout_marginBottom="12dp"
+            android:text="Seleccionar fecha"
+            android:textColor="@color/blancotexto"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toTopOf="@+id/AdminServicio"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

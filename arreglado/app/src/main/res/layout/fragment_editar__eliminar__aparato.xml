@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:theme="@style/Theme.Arreglado">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout3"
+        android:layout_width="376dp"
+        android:layout_height="456dp"
+        android:layout_marginStart="13dp"
+        android:layout_marginTop="136dp"
+        android:layout_marginEnd="13dp"
+        android:background="@drawable/borde_constraint"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.333"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/Kwhwatts"
+            android:layout_width="350dp"
+            android:layout_height="25dp"
+            android:layout_marginBottom="16dp"
+            android:background="@color/verdecuadro"
+            android:text="@string/KW"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="@color/blancotexto"
+            app:layout_constraintBottom_toTopOf="@+id/radioGroup"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <RadioGroup
+            android:id="@+id/radioGroup"
+            android:layout_width="300dp"
+            android:layout_height="53dp"
+            android:layout_marginBottom="16dp"
+            android:background="@color/verdecuadro"
+            android:orientation="horizontal"
+            android:theme="@style/Theme.Arreglado"
+            app:layout_constraintBottom_toTopOf="@+id/Cantidadusada"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <androidx.appcompat.widget.AppCompatRadioButton
+                android:id="@+id/radioButtonKwh"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/white"
+                android:text="@string/K"
+                android:textColor="@color/white" />
+
+            <androidx.appcompat.widget.AppCompatRadioButton
+                android:id="@+id/radioButtonWatts"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/white"
+                android:text="@string/W"
+                android:textColor="@color/white" />
+
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/NombreOBJ"
+            android:layout_width="350dp"
+            android:layout_height="25dp"
+            android:layout_marginBottom="12dp"
+            android:background="@color/verdecuadro"
+            android:text="@string/NomOBJ"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="@color/blancotexto"
+            app:layout_constraintBottom_toTopOf="@+id/InputNomOBJ"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <EditText
+            android:id="@+id/InputNomOBJ"
+            android:layout_width="350dp"
+            android:layout_height="50dp"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/edittext_borde"
+            android:ems="10"
+            android:hint="Lavadora samsung, Refrigerador LG"
+            android:inputType="text"
+            android:textColor="@color/blancotexto"
+            android:textColorHint="@color/blancotexto"
+            app:layout_constraintBottom_toTopOf="@+id/Kwhwatts"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/Cantidadusada"
+            android:layout_width="350dp"
+            android:layout_height="25dp"
+            android:layout_marginBottom="15dp"
+            android:background="@color/verdecuadro"
+            android:text="@string/CantidadUsada"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="@color/blancotexto"
+            app:layout_constraintBottom_toTopOf="@+id/InputCantidadUtiliza"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <EditText
+            android:id="@+id/InputCantidadUtiliza"
+            android:layout_width="350dp"
+            android:layout_height="50dp"
+            android:layout_marginBottom="13dp"
+            android:background="@drawable/edittext_borde"
+            android:ems="10"
+            android:hint="Ej: 22.4"
+            android:inputType="text"
+            android:textColor="@color/blancotexto"
+            android:textColorHint="@color/blancotexto"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <ImageView
+            android:id="@+id/imageViewAparato"
+            android:layout_width="112dp"
+            android:layout_height="93dp"
+            android:layout_marginStart="128dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="128dp"
+            android:background="@color/verdecuadro"
+            android:contentDescription="@string/descripcion_imagen"
+            android:src="@drawable/ic_menu_camera"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <Button
+        android:id="@+id/buttonEditarAparato"
+        android:layout_width="180dp"
+        android:layout_height="75dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:text="@string/Editar"
+        android:textColor="@color/blancotexto"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/buttonCancelarEditarAparato"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout3" />
+
+    <Button
+        android:id="@+id/buttonCancelarEditarAparato"
+        android:layout_width="180dp"
+        android:layout_height="75dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="17dp"
+        android:layout_marginEnd="5dp"
+        android:text="@string/Cancelar"
+        android:textColor="@color/blancotexto"
+        app:layout_constraintEnd_toStartOf="@+id/buttonEditarAparato"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout3" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
