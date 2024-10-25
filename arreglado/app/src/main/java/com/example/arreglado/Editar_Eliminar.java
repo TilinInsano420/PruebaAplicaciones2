@@ -63,10 +63,11 @@ public class Editar_Eliminar extends Fragment {
                         for (DocumentSnapshot document : task.getResult()) {
                             Aparato aparato = document.toObject(Aparato.class);
                             if (aparato != null) {
+                                aparato.setId(document.getId());
                                 aparatoList.add(aparato);
                             }
                         }
-                        AparatoAdapter adapter = new AparatoAdapter(context, aparatoList);
+                        AparatoRecyclerAdapter adapter = new AparatoRecyclerAdapter(context, aparatoList);
                         recyclerView.setAdapter(adapter);
                     } else {
                         Toast.makeText(context, "No se encontraron aparatos para este usuario.", Toast.LENGTH_SHORT).show();
@@ -82,12 +83,12 @@ public class Editar_Eliminar extends Fragment {
         }
     }
 
-    public class AparatoAdapter extends RecyclerView.Adapter<AparatoAdapter.AparatoViewHolder> {
+    public class AparatoRecyclerAdapter extends RecyclerView.Adapter<AparatoRecyclerAdapter.AparatoViewHolder> {
 
         private final Context context;
         private final List<Aparato> aparatoList;
 
-        public AparatoAdapter(Context context, List<Aparato> aparatoList) {
+        public AparatoRecyclerAdapter(Context context, List<Aparato> aparatoList) {
             this.context = context;
             this.aparatoList = aparatoList;
         }
@@ -193,17 +194,17 @@ public class Editar_Eliminar extends Fragment {
         private String imageUrl;
         private String nombre;
         private String tipoEnergia;
-        private String userId;
+        private String id;
 
         public Aparato() {
         }
 
-        public Aparato(double cantidad, String imageUrl, String nombre, String tipoEnergia, String userId) {
+        public Aparato(double cantidad, String imageUrl, String nombre, String tipoEnergia, String id) {
             this.cantidad = cantidad;
             this.imageUrl = imageUrl;
             this.nombre = nombre;
             this.tipoEnergia = tipoEnergia;
-            this.userId = userId;
+            this.id = id;
         }
 
         public double getCantidad() {
@@ -239,7 +240,11 @@ public class Editar_Eliminar extends Fragment {
         }
 
         public String getId() {
-            return userId;
+            return id;
+        }
+
+        public void setId(String id) {
+            this.id = id;
         }
     }
 }

@@ -1,0 +1,76 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/item_aparato"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/borde_constraint"
+    android:clickable="true"
+    android:focusable="true"
+    android:padding="16dp">
+
+    <ImageView
+        android:id="@+id/imagenAparato"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:background="@color/verdecuadro"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <TextView
+        android:id="@+id/nombreAparato"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:background="@color/verdecuadro"
+        android:text="@string/nombre_aparatos"
+        android:textColor="@color/blancotexto"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@id/imagenAparato"
+        app:layout_constraintTop_toTopOf="@id/imagenAparato" />
+
+    <TextView
+        android:id="@+id/cantidadAparato"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:background="@color/verdecuadro"
+        android:text="@string/CantidadUtil"
+        android:textColor="@color/blancotexto"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@id/imagenAparato"
+        app:layout_constraintTop_toBottomOf="@id/nombreAparato" />
+
+    <TextView
+        android:id="@+id/tipoGastoAparato"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:background="@color/verdecuadro"
+        android:text="@string/tipo_energia1"
+        android:textColor="@color/blancotexto"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@id/imagenAparato"
+        app:layout_constraintTop_toBottomOf="@id/cantidadAparato" />
+
+    <TextView
+        android:id="@+id/costeTotalAparato"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:background="@color/verdecuadro"
+        android:text="Coste Total: No definido"
+        android:textColor="@color/blancotexto"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@id/imagenAparato"
+        app:layout_constraintTop_toBottomOf="@id/tipoGastoAparato" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -25,7 +25,7 @@ public class Cantidad_usada extends Fragment {
     private FirebaseFirestore db;
 
     private String nombreAparato;
-    private int cantidadUtiliza;
+    private double cantidadUtiliza; // Cambiado a tipo double para manejar decimales
     private String tipoEnergia;
 
     public Cantidad_usada() {
@@ -45,11 +45,11 @@ public class Cantidad_usada extends Fragment {
 
         if (getArguments() != null) {
             nombreAparato = getArguments().getString("nombre");
-            cantidadUtiliza = getArguments().getInt("cantidadUtiliza");
+            cantidadUtiliza = getArguments().getDouble("cantidadUtiliza"); // Recuperar como double
             tipoEnergia = getArguments().getString("tipoEnergia");
 
             ((TextView) view.findViewById(R.id.textViewNombreAparato)).setText("Aparato: " + nombreAparato);
-            ((TextView) view.findViewById(R.id.textViewCantidadUtiliza)).setText("Cantidad que utiliza: " + cantidadUtiliza);
+            ((TextView) view.findViewById(R.id.textViewCantidadUtiliza)).setText("Cantidad que utiliza: " + cantidadUtiliza); // Mostrar el valor con decimales
             ((TextView) view.findViewById(R.id.textViewTipoEnergia)).setText("Tipo de energía: " + tipoEnergia);
         }
 
@@ -63,24 +63,28 @@ public class Cantidad_usada extends Fragment {
     private void agregarCantidad() {
         String cantidadStr = editTextCantidad.getText().toString();
         if (!cantidadStr.isEmpty()) {
-            int cantidad = Integer.parseInt(cantidadStr);
+            try {
+                double cantidad = Double.parseDouble(cantidadStr);
 
-            int selectedId = radioGroupTipoUso.getCheckedRadioButtonId();
-            if (selectedId != -1) {
-                RadioButton selectedRadioButton = requireView().findViewById(selectedId);
-                String tipoUso = selectedRadioButton.getText().toString();
+                int selectedId = radioGroupTipoUso.getCheckedRadioButtonId();
+                if (selectedId != -1) {
+                    RadioButton selectedRadioButton = requireView().findViewById(selectedId);
+                    String tipoUso = selectedRadioButton.getText().toString();
 
-                db.collection("usos").add(new Uso(nombreAparato, cantidad, tipoUso))
-                        .addOnSuccessListener(aVoid -> {
-                            Toast.makeText(getActivity(), "Cantidad agregada correctamente", Toast.LENGTH_SHORT).show();
-                            requireActivity().getSupportFragmentManager().popBackStack();
-                        })
-                        .addOnFailureListener(e -> Toast.makeText(getActivity(), "Error al agregar cantidad: " + e.getMessage(), Toast.LENGTH_SHORT).show());
-            } else {
-                Toast.makeText(getActivity(), "Seleccione un tipo de uso", Toast.LENGTH_SHORT).show();
+                    db.collection("usos").add(new Uso(nombreAparato, cantidad, tipoUso))
+                            .addOnSuccessListener(aVoid -> {
+                                Toast.makeText(getActivity(), "Cantidad agregada correctamente", Toast.LENGTH_SHORT).show();
+                                requireActivity().getSupportFragmentManager().popBackStack();
+                            })
+                            .addOnFailureListener(e -> Toast.makeText(getActivity(), "Error al agregar cantidad: " + e.getMessage(), Toast.LENGTH_SHORT).show());
+                } else {
+                    Toast.makeText(getActivity(), "Seleccione un tipo de uso", Toast.LENGTH_SHORT).show();
+                }
+            } catch (NumberFormatException e) {
+                Toast.makeText(getActivity(), "Ingrese una cantidad válida", Toast.LENGTH_SHORT).show();
             }
         } else {
-            Toast.makeText(getActivity(), "Ingrese una cantidad válida", Toast.LENGTH_SHORT).show();
+            Toast.makeText(getActivity(), "Ingrese una cantidad", Toast.LENGTH_SHORT).show();
         }
     }
 
@@ -90,13 +94,13 @@ public class Cantidad_usada extends Fragment {
 
     public static class Uso {
         private String nombreAparato;
-        private int cantidad;
+        private double cantidad; // Cambiado a double
         private String tipoUso;
 
         public Uso() {
         }
 
-        public Uso(String nombreAparato, int cantidad, String tipoUso) {
+        public Uso(String nombreAparato, double cantidad, String tipoUso) {
             this.nombreAparato = nombreAparato;
             this.cantidad = cantidad;
             this.tipoUso = tipoUso;
@@ -110,11 +114,11 @@ public class Cantidad_usada extends Fragment {
             this.nombreAparato = nombreAparato;
         }
 
-        public int getCantidad() {
+        public double getCantidad() {
             return cantidad;
         }
 
-        public void setCantidad(int cantidad) {
+        public void setCantidad(double cantidad) {
             this.cantidad = cantidad;
         }
 

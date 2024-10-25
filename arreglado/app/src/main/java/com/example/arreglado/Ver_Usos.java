@@ -101,8 +101,25 @@ public class Ver_Usos extends Fragment {
         public void onBindViewHolder(@NonNull AparatoViewHolder holder, int position) {
             Aparato aparato = aparatoList.get(position);
             holder.nombreAparato.setText("Nombre del aparato: " + (aparato.getNombre() != null ? aparato.getNombre() : "Sin nombre"));
-            holder.cantidadUsada.setText("Cantidad que utiliza: " + (aparato.getCantidad() > 0 ? String.valueOf(aparato.getCantidad()) : "N/A"));
-            holder.tipoUso.setText("Tipo de energía: " + (aparato.getTipoEnergia() != null ? aparato.getTipoEnergia() : "No especificado"));
+
+
+            holder.cantidadUsada.setText("Cantidad usada: No definido");
+            holder.tipoUso.setText("Tipo de uso: No definido");
+
+
+            firestore.collection("usos")
+                    .whereEqualTo("nombreAparato", aparato.getNombre())
+                    .get()
+                    .addOnSuccessListener(queryDocumentSnapshots -> {
+                        if (!queryDocumentSnapshots.isEmpty()) {
+                            DocumentSnapshot usoDoc = queryDocumentSnapshots.getDocuments().get(0);
+                            Uso uso = usoDoc.toObject(Uso.class);
+                            if (uso != null) {
+                                holder.cantidadUsada.setText("Cantidad usada: " + uso.getCantidad());
+                                holder.tipoUso.setText("Tipo de uso: " + uso.getTipoUso());
+                            }
+                        }
+                    });
 
             holder.itemView.setOnClickListener(v -> {
                 Cantidad_usada cantidadUsadaFragment = new Cantidad_usada();
@@ -170,6 +187,45 @@ public class Ver_Usos extends Fragment {
 
         public void setTipoEnergia(String tipoEnergia) {
             this.tipoEnergia = tipoEnergia;
+        }
+    }
+
+    public static class Uso {
+        private String nombreAparato;
+        private int cantidad;
+        private String tipoUso;
+
+        public Uso() {
+        }
+
+        public Uso(String nombreAparato, int cantidad, String tipoUso) {
+            this.nombreAparato = nombreAparato;
+            this.cantidad = cantidad;
+            this.tipoUso = tipoUso;
+        }
+
+        public String getNombreAparato() {
+            return nombreAparato;
+        }
+
+        public void setNombreAparato(String nombreAparato) {
+            this.nombreAparato = nombreAparato;
+        }
+
+        public int getCantidad() {
+            return cantidad;
+        }
+
+        public void setCantidad(int cantidad) {
+            this.cantidad = cantidad;
+        }
+
+        public String getTipoUso() {
+            return tipoUso;
+        }
+
+        public void setTipoUso(String tipoUso) {
+            this.tipoUso = tipoUso;
         }
     }
 }

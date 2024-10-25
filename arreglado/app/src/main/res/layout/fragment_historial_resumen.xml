@@ -23,7 +23,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            tools:listitem="@layout/item_aparato" />
+            tools:listitem="@layout/item_aparto2" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -36,7 +36,21 @@
         android:background="@drawable/borde_constraint"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent">
+
+        <TextView
+            android:id="@+id/txt_monto_ahorrado3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="132dp"
+            android:background="@color/verdecuadro"
+            android:text="Monto Ahorrado"
+            android:textColor="@color/blancotexto"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/txt_monto_ahorrado"
@@ -62,6 +76,21 @@
         app:layout_constraintStart_toStartOf="parent">
 
         <TextView
+            android:id="@+id/txt_valor_boleta3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="44dp"
+            android:layout_marginEnd="44dp"
+            android:layout_marginBottom="24dp"
+            android:background="@color/verdecuadro"
+            android:text="Valor Boleta"
+            android:textColor="@color/blancotexto"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
             android:id="@+id/txt_valor_boleta"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -82,6 +111,21 @@
         android:background="@drawable/borde_constraint"
         app:layout_constraintBottom_toTopOf="@+id/Monto_ahorrado"
         app:layout_constraintEnd_toEndOf="parent">
+
+        <TextView
+            android:id="@+id/txt_valor_aparatos3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="44dp"
+            android:layout_marginEnd="44dp"
+            android:layout_marginBottom="24dp"
+            android:background="@color/verdecuadro"
+            android:text="Valor Aparatos"
+            android:textColor="@color/blancotexto"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
 
         <TextView
             android:id="@+id/txt_valor_aparatos"
